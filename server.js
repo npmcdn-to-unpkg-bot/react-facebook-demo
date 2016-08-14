@@ -34,8 +34,8 @@ app.post('/api/comments', function (req, res) {
       console.error(err);
       process.exit(1);
     }
-    // console.log(JSON.parse(data));
-    var dataArr = JSON.parse(data);
+    let dataArr = JSON.parse(data);
+
     dataArr.push(req.body);
     fs.writeFile(COMMENTS_FILE, JSON.stringify(dataArr), function (err) {
       if(err) {

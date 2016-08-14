@@ -65,7 +65,7 @@ const CommentList = React.createClass({
       return (
         <Comment key={index} author={ comment.author }>{ comment.text }</Comment>
       )
-    })
+    }).reverse();
     return (
       <div className="commentList">
         { commentNodes }
