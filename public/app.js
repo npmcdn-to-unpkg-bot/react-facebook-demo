@@ -10,8 +10,8 @@ const CommentForm = React.createClass({
   },
   handleSubmit: function (e) {
     e.preventDefault();
-    const author = this.state.author.trim();
-    const text = this.state.text.trim();
+    let author = this.state.author.trim();
+    let text = this.state.text.trim();
     if(!text || !author) {
       return;
     }
